@@ -1,9 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-// A stub to satisfy the Gatsby demon.
 const Artist = ({ data }) => {
-  return <div>Stub of artist page.</div>;
+  return (
+    <div>
+      <h2>{data.markdownRemark.frontmatter.title}</h2>
+      <p>{data.markdownRemark.frontmatter.description}</p>
+      <p>{data.markdownRemark.frontmatter.spontaneity * 100}% spontaneous</p>
+    </div>
+  );
 };
 
 export default Artist;
